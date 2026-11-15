@@ -1,6 +1,3 @@
-# Шаблоны Java для контрольной
-
-Три файла-шаблона с пропусками: Сущность.java, Менеджер.java и Main.java. Ничего учить наизусть не нужно — просто переименуй классы и поля под задание. В конце — инструкция по переделке за 2 минуты и чек-лист проверки.
 
 ## Файл 1: Сущность.java
 
@@ -26,7 +23,6 @@ public class Сущность {
     public int getPole2() { return pole2; }
 
     // 4. Красивый вывод
-    @Override
     public String toString() {
         return "Pole1: " + pole1 + " | Pole2: " + pole2;
     }
@@ -35,7 +31,6 @@ public class Сущность {
 
     // Для строк всегда compareToIgnoreCase
     public static class NameComparator implements Comparator<Сущность> {
-        @Override
         public int compare(Сущность o1, Сущность o2) {
             return o1.getPole1().compareToIgnoreCase(o2.getPole1());
         }
@@ -43,7 +38,6 @@ public class Сущность {
 
     // Для чисел всегда Integer.compare (или Double.compare)
     public static class NumberComparator implements Comparator<Сущность> {
-        @Override
         public int compare(Сущность o1, Сущность o2) {
             return Integer.compare(o1.getPole2(), o2.getPole2());
         }
